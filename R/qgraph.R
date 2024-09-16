@@ -477,11 +477,11 @@ qgraph <- function( input, ... )
   
   if(is.null(qgraphObject$Arguments[['pieBorder']])){
     pieBorder <- .15
+  } else {
+    pieBorder <- qgraphObject$Arguments[['pieBorder']]
     if (any(pieBorder < 0 | pieBorder > 1)){
       stop("Values in the 'pieBorder' argument must be within [0,1]")
     }
-  } else {
-    pieBorder <- qgraphObject$Arguments[['pieBorder']]
   }
   
   if(is.null(qgraphObject$Arguments[['pieStart']])){
